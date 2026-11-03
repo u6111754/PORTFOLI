@@ -1,0 +1,442 @@
+/* CONFIGURACIÓ GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+/* PORTADA */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* FOTOGRAFIA */
+.background-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  z-index: 1;
+}
+
+/* POST-IT */
+.post-it {
+  position: absolute;
+  width: 300px;
+  height: 300;
+  top: 48%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  object-fit: contain;
+}
+
+.portfolio-title {
+  position: absolute;
+  width: 260px;
+  height: auto;
+  top: 49%;
+  left: 51%;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  z-index: 5;
+}
+
+/* BOTONS */
+.nav-button {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 4;
+
+  text-decoration: none;
+  color: black;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  border: 1px solid black;
+  border-radius: 30px;
+
+  padding: 5px 12px;
+
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.about {
+  left: 10%;
+}
+
+.work {
+  right: 10%;
+}
+
+/* ABOUT ME */
+.about {
+  left: 10%;
+}
+
+/* WORK */
+.work {
+  right: 10%;
+}
+
+/* HOVER */
+.nav-button:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+/* PART INFERIOR */
+.bottom {
+  width: 100%;
+  min-height: 300px;
+  background-color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .hero {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .post-it {
+    width: 120px;
+  }
+
+  .nav-button {
+    font-size: 12px;
+    padding: 4px 9px;
+  }
+
+  .about {
+    left: 3%;
+  }
+
+  .work {
+    right: 3%;
+  }
+}
+
+/* ABOUT ME */
+
+/* TIRA DE NEGATIUS */
+
+.film-strip {
+  position: absolute;
+
+  width: 100vw;
+  height: 320px;
+
+  top: 50%;
+  left: 0%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: rotate(3deg);
+
+  opacity: 0.45;
+
+  z-index: 1;
+}
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  overflow: hidden;
+  padding: 90px 20px;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h1 {
+  color: #650d0d;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 18px;
+  border: 1.5px solid #650d0d;
+  border-radius: 30px;
+  color: #650d0d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   WORKS SECTION
+========================= */
+
+.works-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
+  padding: 90px 40px;
+  position: relative;
+}
+
+.works-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* TÍTOL */
+
+.works-container h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-stretch: condensed;
+  font-size: 96px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 45px;
+  text-align: left;
+}
+
+/* GRAELLA DE FOTOGRAFIES */
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+  row-gap: 65px;
+}
+
+/* CADA PROJECTE */
+
+.work-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+}
+
+/* TEXT DEL PROJECTE */
+
+.work-item span {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* FOTOGRAFIES */
+
+.work-item img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ALTERNANÇA DE POSICIÓ */
+
+.work-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.work-media {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.work-media img,
+.work-media video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.work-media video {
+  opacity: 0;
+}
+
+.work-item:hover .work-media video {
+  opacity: 1;
+}
+
+.work-item:hover .work-media img {
+  opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+/* Fotografia de fons */
+
+.contact-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Títol CONTACT */
+
+.contact-title {
+  position: absolute;
+  top: 53%;
+  left: 12%;
+  z-index: 2;
+  color: white;
+}
+
+.contact-title h1 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-stretch: condensed;
+  font-size: 96px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.contact-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-stretch: black;
+  font-size: 40px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+/* Targeta blanca */
+
+.contact-card {
+  position: absolute;
+  z-index: 3;
+  width: 65%;
+  max-width: 750px;
+  min-height: 300px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 40px 40px 0 0;
+  padding: 45px 65px;
+  box-sizing: border-box;
+}
+
+.contact-card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-stretch: black;
+  font-size: 70px;
+  margin: 0 0 10px;
+  font-weight: 900;
+}
+
+.contact-card p {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 430px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.contact-info a {
+  color: black;
+  text-decoration: none;
+}
+
+/* RETOCS CONTACT */
+
+.contact-title {
+  left: 12%;
+  top: 45%;
+}
+
+.contact-title h1 {
+  font-size: 58px;
+}
+
+.contact-card {
+  width: 62%;
+  max-width: 730px;
+  min-height: 340px;
+  padding: 45px 65px;
+}
+
+.contact-background img {
+  object-position: center 35%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.85);
+}
